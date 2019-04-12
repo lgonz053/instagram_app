@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   get '/homes' => 'homes#index'
 
   resources :users, only: [:show, :edit, :update]
+  resources :posts, only: [:new, :create]
   root to: 'homes#index'
 end
